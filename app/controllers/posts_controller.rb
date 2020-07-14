@@ -24,14 +24,7 @@ class PostsController < ApplicationController
   end
    
   private
-   
-   
-  # We pass the permitted fields in as *args;
-  # this keeps `post_params` pretty dry while
-  # still allowing slightly different behavior
-  # depending on the controller action. This
-  # should come after the other methods
-   
+
   def post_params(*args)
     params.require(:post).permit(*args)
   end
